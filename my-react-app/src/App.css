@@ -1,0 +1,307 @@
+body {
+  background-image: url(./assets/vegeta-bg.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  align-items: center
+}
+
+*,*:before,*:after {
+  box-sizing: border-box
+}
+p{
+  font-size: 1.5rem;
+  color: #050505;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+
+}
+body,html {
+  min-height: 100vh;
+  margin: 0;
+  font-family: SF Pro Display,Segoe UI,Arial,sans-serif;
+}
+
+.table-app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff2e;
+  box-shadow: 0 8px 32px #1f268726;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255,255,255,.4);
+  backdrop-filter: blur(5px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  padding: 48px 32px
+}
+
+.neon-text {
+color: #ffd700;
+font-size: 2.5rem;
+font-weight: bold;
+letter-spacing: 2px;
+text-shadow:
+  0 0 8px #ffef91,
+  0 0 20px #ffac33,
+  0 0 40px #ff9800,
+  0 0 70px #ff6f00;
+animation: flicker 2.8s infinite alternate;
+}
+
+@keyframes flicker {
+0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+  text-shadow:
+    0 0 8px #ffef91,
+    0 0 20px #ffac33,
+    0 0 40px #ff9800,
+    0 0 70px #ff6f00;
+  opacity: 1;
+}
+20%, 22%, 24%, 55% {
+  text-shadow: none;
+  opacity: 0.65;
+}
+}
+
+.add-item-form,.data-table {
+  background: #f0dcdc38;
+  border-radius: 18px;
+  box-shadow: 0 1.5px 18px #96aff01a;
+  border: 1.5px solid rgba(255,255,255,.19);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  padding: 20px;
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 420px
+}
+
+.add-item-form input[type=text] {
+  padding: 10px 14px;
+  margin: 0 8px 12px 0;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #a9bae2e0;
+  transition: background .2s;
+  outline: none;
+  box-shadow: 0 1.5px 6px #7882b40f
+}
+
+.add-item-form input[type=text]:focus {
+  background: #b3bcce
+}
+
+.add-item-form button {
+  padding: 10px 18px;
+  background: linear-gradient(85deg,#72b2f8 40%,#b2f7ef);
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #2a415c;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #9bdcff44;
+  transition: background .2s,color .2s
+}
+
+.add-item-form button:hover {
+  background: linear-gradient(80deg,#62aaf9 50%,#91ebff);
+  color: #163060
+}
+
+.data-table {
+  border-spacing: 20;
+  border-collapse: separate
+}
+
+.data-table th,.data-table td {
+  padding: 13px 18px;
+  text-align: center;
+  border-radius: 6px;
+  background: #f5f8ffeb;
+  box-shadow: 0 1px 6px #7882b40f
+}
+
+.data-table th {
+  font-size: 1.09rem;
+  color: #365674cc;
+  letter-spacing: 1px;
+  background: #f0f6ffbf
+}
+
+.data-table tr {
+  margin-bottom: 10px
+}
+
+.data-table tr:not(:last-of-type) td {
+  border-bottom: 1px solid #dbeafe33
+}
+
+.status-dropdown {
+  border-radius: 8px;
+  border: 1.2px solid #deeaf9aa;
+  background: #fffffffc;
+  padding: 4px 10px;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 1px 4px #76bcfb16;
+  color: #404b63
+}
+
+.delete-button {
+  background: linear-gradient(87deg,#f16d70 45%,#ffd6da);
+  border: none;
+  border-radius: 8px;
+  color: #6c272d;
+  font-weight: 600;
+  box-shadow: 0 1.5px 6px #f16d7044;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: background .18s,color .18s
+}
+
+.delete-button:hover {
+  background: linear-gradient(89deg,#e13c44 70%,#f49db3);
+  color: #fff
+}
+
+.no-items-message {
+  font-size: 1.13rem;
+  color: #3b5069dd;
+  background: #ffffffbf;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 24px 0;
+  box-shadow: 0 1.5px 6px #f1f5fb55
+}
+/* Container on the left side, horizontal */
+.logoBoxContainer {
+  position: fixed; /* fix position on left side */
+  top: 20%;
+  left: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column; /* horizontal layout */
+  gap: 20px;
+}
+
+/* Container for logo on top + plus button below vertically */
+.logoPlusContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* space between logo and plus */
+}
+
+/* Website logo image */
+.logoImage {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00cfffcc;
+  border: 2px solid #00cfff;
+  background-color: #111;
+}
+
+/* Plus button styling */
+.plusButton {
+  font-size: 32px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid #00cfff;
+  background-color: #111;
+  color: #00cfff;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00cfffcc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plusButton:hover {
+  background-color: #00cfff10;
+  box-shadow: 0 0 20px #00cfffdd;
+}
+
+/* Popup overlay - full screen transparent black */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+/* Popup box */
+.popupContent {
+  background-color: #222;
+  padding: 24px 32px;
+  border-radius: 12px;
+  border: 2px solid #00cfff;
+  box-shadow: 0 0 24px #00cfffcc;
+  color: #00cfff;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.popupContent h3 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 0 0 6px #22e7ff;
+}
+
+.popupContent input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #333;
+  color: #00cfff;
+  font-size: 16px;
+  outline: none;
+}
+
+.popupButtons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.popupButtons button {
+  padding: 8px 24px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #00cfff80;
+  background: linear-gradient(90deg, #00cfff 40%, #22e7ff 100%);
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.popupButtons button:hover {
+  background: linear-gradient(90deg, #22e7ff 40%, #00cfff 100%);
+}
+
+/* Cancel button with red tint */
+.cancelButton {
+  background: linear-gradient(90deg, #ff5757 40%, #ff2222 100%);
+  box-shadow: 0 0 12px #ff222280;
+}
+
+.cancelButton:hover {
+  background: linear-gradient(90deg, #ff2222 40%, #ff5757 100%);
+}
