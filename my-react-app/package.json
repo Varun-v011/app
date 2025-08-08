@@ -64,9 +64,6 @@
     }
   },
     "nodemonConfig": {
-  "watch": ["src", "main", "electron.js", "preload.js"],
-  "ext": "js,ts,json,css,scss,sass,jsx,tsx",
-  "ignore": ["dist", "node_modules"],
-  "exec": "electron ."
+  
 }
 }

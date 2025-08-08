@@ -1,9 +1,8 @@
 body {
-  background-image: url(./assets/vegeta-bg.jpeg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  align-items: center
+  /* Diagonal gradient: top right (dark purple) to bottom left (light purple) */
+  background: linear-gradient(41deg, #400e4e, #664a9b);
+  min-height: 100vh;
+  color: #f5f4f7;
 }
 
 *,*:before,*:after {
@@ -179,13 +178,23 @@ animation: flicker 2.8s infinite alternate;
 }
 /* Container on the left side, horizontal */
 .logoBoxContainer {
-  position: fixed; /* fix position on left side */
-  top: 20%;
-  left: 10px;
-  transform: translateY(-50%);
+  position: fixed;      /* fixed position */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100px;         /* sidebar width */
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1); /* translucent white */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);   /* frosted glass blur */
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0 10px 10px 0; /* rounded on right side */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ece9f7;        /* light text color for contrast */
   display: flex;
-  flex-direction: column; /* horizontal layout */
+  flex-direction: column;
   gap: 20px;
+  z-index: 1000;   
 }
 
 /* Container for logo on top + plus button below vertically */
@@ -200,7 +209,7 @@ animation: flicker 2.8s infinite alternate;
 .logoImage {
   width: 64px;
   height: 64px;
-  border-radius: 12px;
+  border-radius: 50%;
   box-shadow: 0 0 15px #00cfffcc;
   border: 2px solid #00cfff;
   background-color: #111;
@@ -212,7 +221,7 @@ animation: flicker 2.8s infinite alternate;
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  border: 2px solid #00cfff;
+  border: 2px solid #380382;
   background-color: #111;
   color: #00cfff;
   cursor: pointer;
@@ -304,4 +313,22 @@ animation: flicker 2.8s infinite alternate;
 
 .cancelButton:hover {
   background: linear-gradient(90deg, #ff2222 40%, #ff5757 100%);
+}
+.profilePanel{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 290px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1); /* translucent white */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);   /* frosted glass blur */
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0 10px 10px 0; /* rounded on right side */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ece9f7;        /* light text color for contrast */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1000;  
 }

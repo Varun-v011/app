@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import LogoBox from './sidePanel';
-import LeetInput from './leetmodule';
+import ProfilePanel from './profilePanel';
 function QuoteWidget() {
   const [quote, setQuote] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -118,7 +118,7 @@ function TableApp() {
       {/* Display QuoteWidget here */}
       <LogoBox /> 
       <QuoteWidget />
-      <LeetInput />
+      <ProfilePanel />
 
       <h1 className="neon-text">My Data Entry Table</h1>
 

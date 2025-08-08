@@ -53,7 +53,7 @@ function LogoBox() {
       {/* Main horizontal container */}
       <div className="logoBoxContainer">
         {logoUrls.map((url, i) => (
-          <button>
+          <button onClick={url}>
             <img key={i} src={url} alt="Website logo" className="logoImage" />
             </button>
         ))}
