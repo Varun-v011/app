@@ -2,6 +2,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
 import NewsPanel from "./notificatification";
+import Dailytask from "./Dailytask";
 
 function ProfilePanel() {
   const [name, setName] = useState("");
@@ -132,7 +133,10 @@ function ProfilePanel() {
                 }}
               />
             )}
-        </div>   
+        </div>  
+        <Dailytask />
+
+        
       </div>
     );
   }
@@ -196,5 +200,4 @@ function ProfilePanel() {
     </div>
   );
 }
-
 export default ProfilePanel;

@@ -332,3 +332,12 @@ animation: flicker 2.8s infinite alternate;
   gap: 20px;
   z-index: 1000;  
 }
+li{
+    color: rgba(255, 255, 255, 0.813);
+    text-decoration: none;
+    text-align: justify;
+    font-size: 1.2rem;
+    gap: 20px;
+    padding: 8px;
+    list-style-type: none;
+}

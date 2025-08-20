@@ -29,7 +29,7 @@ async function createWindow() {
       responseHeaders: {
         ...details.responseHeaders,
         "Content-Security-Policy": [
-        "default-src 'self'; connect-src 'self' https://zenquotes.io; img-src 'self' https://leetcode-stats.vercel.app https://img.logo.dev https://leetcard.jacoblin.cool/varun_v11?ext=activity data: blob:;"
+        "default-src 'self'; connect-src 'self' https://zenquotes.io https://leetcode-stats.tashif.codes; img-src 'self' https://leetcode-stats.vercel.app https://img.logo.dev https://leetcard.jacoblin.cool/varun_v11?ext=activity  data: blob:;"
 
         ]
       }
